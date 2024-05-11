@@ -4,9 +4,8 @@ from gameparts.exceptions import CellOccupiedError, FieldIndexError
 
 
 def save_result(result):
-    file = open('results.txt', 'a')
-    file.write(result + '\n')
-    file.close()
+    with open('results.txt', 'a') as file:
+        file.write(result + '\n')
 
 
 def main():
